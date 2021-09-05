@@ -278,6 +278,9 @@ table-background {
     background-color: #94e615;
     color: #ffffff;
 }
+.tab-group .active a:hover {
+  background-color: #94e615; /*the default color*/
+}
 
 .tab-content > div:last-child {
     display: none;
