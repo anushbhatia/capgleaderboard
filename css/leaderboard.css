@@ -238,7 +238,7 @@ table-background {
 }
 .form {
     background: rgba(19, 35, 47, 0.9);
-    padding: 40px;
+    padding: 10px;
     max-width: auto;
     margin: 40px auto;
     border-radius: 4px;

@@ -1,0 +1,17 @@
+[
+    {
+     "id":3,
+     "name":"Anush Bhatia",
+     "points":100
+    },
+    {
+        "id":2,
+        "name":"Samarth Sharma",
+        "points":30
+    },
+    {
+        "id":1,
+        "name":"Ritik Patel",
+        "points":300
+       }
+]

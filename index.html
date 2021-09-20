@@ -1,11 +1,11 @@
 <html>   
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
         <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.js"></script>
         <link rel="stylesheet" href="./css/leaderboard.css">
         <link rel="stylesheet" href="./css/bootstrap_3.minf561.css">
     </head>
     <body onload="init();" id="main-body">
-        
         <div class="outer-div">
             <p id="output"></p>
             <div class="showDiv" id="userLeaderboard">
@@ -20,7 +20,7 @@
                         <tr>
                             <td>
                                 <div class="photo-div2" id="photo2">
-                                    <img src="" id="image2" alt="Smile 1" width="320" height="180">
+                                    <img src="./images/face.jpg" id="image2" alt="Smile 1" width="320" height="180">
                                     <table class="result-table">
                                         <col width="50%">
                                         <col width="50%">
@@ -103,9 +103,9 @@
                                     <th class="score">Points</th>
                                     </tr>
                                     </thead>
-                                <tbody>
+                                <tbody id="leaderboardcontent">
                                 
-                                <tr class="">
+                                <!-- <tr class="">
                                 
                                     <td class="rank"><p><span class="number">1</span></p></td>
                                 
@@ -262,9 +262,9 @@
                                     
                                     
                                 </tr>
-                                
+                                 -->
                         
-                                
+                                 <div id="myData"></div>
                                 </tbody>
                                 </table>
                             </div>
@@ -746,6 +746,29 @@
                     }
                 });
             });
-        
+function rankCalculate(list){
+    return Object.entries(list).sort((a,b) => b[1].points-a[1].points).map(e1=>e1[1])
+}
+fetch('data.json')
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data){
+    appendData(rankCalculate(data));
+    console.log(rankCalculate(data));
+  })
+  .catch(function (err) {
+    console.log(err);
+  });
+  function appendData(data) {
+  var mainContainer = document.querySelector("#leaderboardcontent");
+  for (var i = 0; i < data.length; i++) {
+    var div = document.createElement("tr");
+    div.innerHTML = ` <td class="rank"><p><span class="number">${i+1}</span></p></td>
+    <td class="name"><p><span class="first-letter color${i+1}">${data[i].name[0]}</span>${data[i].name}</p></td> 
+    <td>${data[i].points}</td>`;
+    mainContainer.appendChild(div);
+  }
+}
     </script>
 </html>
