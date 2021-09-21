@@ -381,7 +381,7 @@ Leaderboard Table
     
     
     .result-table {
-        margin: 5px;
+        margin: 2px;
     }
     
     .result-score-line {
@@ -391,20 +391,20 @@ Leaderboard Table
     
     .result-name-text {
 
-        font-size: 15px;
+        font-size: 17px;
         margin-bottom: 0px;
     }
     
     .result-score-div {
         border: 2px solid #12addb;
-        width: 23px;
-        height: 23px;
+        width: 25px;
+        height: 25px;
     }
     
     .result-score-text {
         height: 35px;
         max-height: 35px;
-        font-size: 15px;
+        font-size: 17px;
     }
  } 
 @media (min-width:510px) {
@@ -455,7 +455,7 @@ Leaderboard Table
     }
     
     .result-score-line {
-        width: 130px;
+        width: 140px;
         display: block;
     }
     
