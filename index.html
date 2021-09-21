@@ -106,7 +106,7 @@
                                 <tbody id="leaderboardcontent">
                                 
                          
-                               <--
+                               <!--
                                 <tr class="">
                                 
                                     <td class="rank"><p><span class="number">9</span></p></td>
@@ -641,7 +641,7 @@ fetch('data.json')
     var div = document.createElement("tr");
     div.innerHTML = ` <td class="rank"><p><span class="number">${i+1}</span></p></td>
     <td class="name"><p><span class="first-letter color${i+1}">${data[i].name[0]}</span>${data[i].name}</p></td> 
-    <td>${data[i].points}</td>`;
+    <td class="mark">${data[i].points} Points</td>`;
     mainContainer.appendChild(div);
   }
 }
