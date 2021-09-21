@@ -338,6 +338,8 @@ Leaderboard Table
     .tabs3{
         margin:10px;
     }
+    .leadertable tr th { text-align:center; font-size:22px; padding:12px 20px; background:#94e615; font-weight:normal; color:#fff;}
+.leadertable tr td { text-align:center; font-size:22px; padding:12px 20px; border-bottom:1px solid #ced0d3; color:#081225; vertical-align:middle;}
     .smileimg{
         width: 130px;
         height: 130px;
