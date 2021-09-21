@@ -334,12 +334,87 @@ Leaderboard Table
 .color18{ background:#e2878f !important; color:#fff !important;}
 .color19{ background:#6ec5ff !important; color:#fff !important;}
 .color20{ background:#e7d84e !important; color:#fff !important;}
-@media (min-width:0px) { 
+@media (min-width:0px) {
     .tabs3{
         margin:10px;
     }
-    .leadertable tr th { text-align:center; font-size:22px; padding:12px 20px; background:#94e615; font-weight:normal; color:#fff;}
-.leadertable tr td { text-align:center; font-size:22px; padding:12px 20px; border-bottom:1px solid #ced0d3; color:#081225; vertical-align:middle;}
+    .leadertable tr th { text-align:center; font-size:22px; padding:10px 15px; background:#94e615; font-weight:normal; color:#fff;}
+.leadertable tr td { text-align:center; font-size:22px; padding:10px 15px; border-bottom:1px solid #ced0d3; color:#081225; vertical-align:middle;}
+    .smileimg{
+        width: 100px;
+        height: 100px;
+    }
+    .photo-div1 {
+        -ms-transform: rotate(2deg); /* IE 9 */
+        -webkit-transform: rotate(2deg); /* Safari */
+        transform: rotate(2deg);
+        padding: 8px;
+        width: 120px;
+        height: auto;
+        margin-left: -20px;
+        margin-right: -20px;
+        border: 1px solid;
+        background-color: rgb(255, 255, 255);
+        position: relative;
+        z-index: 1;
+    }
+    .photo-div2 {
+        -ms-transform: rotate(357deg); /* IE 9 */
+        -webkit-transform: rotate(357deg); /* Safari */
+        transform: rotate(357deg);
+        padding: 10px;
+        width: 120px;
+        height: auto;
+        margin-top: 80px;
+        border: 1px solid;
+        background-color: white;
+    }
+    .photo-div3 {
+        -ms-transform: rotate(4deg); /* IE 9 */
+        -webkit-transform: rotate(4deg); /* Safari */
+        transform: rotate(4deg);
+        padding: 10px;
+        width: 120px;
+        height: auto;
+        margin-top: 80px;
+        border: 1px solid;
+        background-color: white;
+    }
+    
+    
+    .result-table {
+        margin: 2px;
+    }
+    
+    .result-score-line {
+        width: 100px;
+        display: block;
+    }
+    
+    .result-name-text {
+
+        font-size: 15px;
+        margin-bottom: 0px;
+    }
+    
+    .result-score-div {
+        border: 2px solid #12addb;
+        width: 22px;
+        height: 22px;
+    }
+    
+    .result-score-text {
+        height: 35px;
+        max-height: 35px;
+        font-size: 15px;
+    }
+}
+@media (min-width:428px) { 
+    .tabs3{
+        margin:10px;
+    }
+    .leadertable tr th { text-align:center; font-size:22px; padding:10px 15px; background:#94e615; font-weight:normal; color:#fff;}
+.leadertable tr td { text-align:center; font-size:22px; padding:10px 15px; border-bottom:1px solid #ced0d3; color:#081225; vertical-align:middle;}
     .smileimg{
         width: 130px;
         height: 130px;
