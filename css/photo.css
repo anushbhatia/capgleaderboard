@@ -272,7 +272,7 @@
     box-shadow: 0px 4px 4px rgb(0,0,0,25%);
     border-radius: 16px;  
     border: none;
-    font-size: 30px;
+    font-size: 25px;
     position: relative;
     margin-top: 60px;
     margin-left: auto;
@@ -411,3 +411,40 @@
 }
 .none { display:none; } 
 .showDiv { display:block; } 
+@media (max-width:540px) {
+    .get-started-button {
+        font-family: 'Ubuntu', Fallback, sans-serif;
+        height: 60px;
+        width:300px;
+        color: white;
+        margin-top: 50px;
+        margin:auto;
+        display: block;
+        font-size: 20px;
+    }
+    .welcom-text {
+        color: white;
+        font-family: 'Ubuntu', Fallback, sans-serif;
+        text-align: center;
+        font-weight: bold;
+        font-size: 30px;
+    }
+}
+@media (max-width:335px) {
+    .get-started-button {
+        font-family: 'Ubuntu', Fallback, sans-serif;
+        height: 50px;
+        width:200px;
+        color: white;
+        margin-top: 40px;
+        margin:auto;
+        display: block;
+    }
+    .welcom-text {
+        color: white;
+        font-family: 'Ubuntu', Fallback, sans-serif;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+    }
+}
