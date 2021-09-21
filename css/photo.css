@@ -30,11 +30,9 @@
     background-position: right;
     background-position-y: top;
     background-size: contain;
-    height: 100vh;
 }
 .index-body-empty {
     background-color: #2B0A3D;
-    height: 100vh;
     padding-top: 0px;
 }
 .welcome-text-container {
@@ -138,7 +136,7 @@
     font-family: 'Ubuntu', Fallback, sans-serif;
 }
 .result-score-div {
-    border: 3px solid #12addb;
+    border: 3px solid #0070AD;
     text-align: center;
     border-radius: 50%;
     width: 70px;
@@ -149,7 +147,7 @@
     height: 55px;
     max-height: 55px;
     font-size: 45px;
-    color: #12addb;
+    color: #0070AD;
     text-align: center;
     margin: auto;
     font-family: 'Ubuntu', Fallback, sans-serif;
@@ -158,14 +156,14 @@
     margin-top: 120px;
 }
 .header-text {
-    color: black;
+    color: white;
     font-family: 'Ubuntu', Fallback, sans-serif;
     text-align: center;
     font-size: 50px;
     font-weight: bold;
 }
 .cancel-text {
-    color: #12ADDB;
+    color: #0070AD;
     font-size: 22px;
     margin-right: 0px;
     margin-top: 30px;
@@ -224,9 +222,10 @@
     height: 80px;
     width: 500px;
     color: white;
-    background-color: #12ADDB;
-    box-shadow: 0px 4px 4px #000;
+    background-color: #0070AD;
     border-radius: 16px;  
+    border:none;
+    box-shadow: 0px 4px 4px rgb(0,0,0,25%);
     font-size: 30px;
     position: relative;
     margin-top: 40px;
@@ -239,7 +238,9 @@
     width: 500px;
     color: black;
     background-color: white;
-    border: 2px solid #12ADDB;
+    border-radius: 16px;  
+    border:none;
+    box-shadow: 0px 4px 4px rgb(0,0,0,25%);
     font-size: 30px;
     position: relative;
     margin-top: 30px;
@@ -253,9 +254,11 @@
     font-family: 'Ubuntu', Fallback, sans-serif;
     height: 80px;
     width: 500px;
-    color: black;
-    background-color: #12ADDB;
-    border: none;
+    color: white;
+    background-color: #0070AD;
+    box-shadow: 0px 4px 4px rgb(0,0,0,25%);
+    border-radius: 16px;  
+    border:none;
     font-size: 30px;
     position: relative;
     margin-top: 60px;
@@ -264,8 +267,10 @@
     font-family: 'Ubuntu', Fallback, sans-serif;
     height: 80px;
     width: 500px;
-    color: black;
-    background-color: #12ADDB;
+    color: white;
+    background-color: #0070AD;
+    box-shadow: 0px 4px 4px rgb(0,0,0,25%);
+    border-radius: 16px;  
     border: none;
     font-size: 30px;
     position: relative;
@@ -294,7 +299,7 @@
     font-size: 100px;
     height: 120px;
     font-weight: bold;
-    color: #12addb;
+    color: #0070AD;
     display: block;
     margin: auto;
     text-align: center;
