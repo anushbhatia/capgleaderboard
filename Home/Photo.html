@@ -1,0 +1,495 @@
+﻿<html>
+<head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <link rel="stylesheet" href="/css/photo.css">
+</head>
+<body onload="init();" id="main-body" class="body-background" >
+<p id="output"></p>
+<div id="video-screen" class="showDiv">
+    <p class="cancel-text" onclick="window.location.href='/'" >Cancel</p>
+                <div class="text-div">
+                    <p class="header-text">Get your best smile ready!</p>
+                </div>
+                
+                <div class="image-container">
+
+                    <video autoplay="true" id="videoElement"></video>
+                    <button id="start-button"class="snapshot-button" onclick="countdown();">Start</button>
+                    <p id="countdowntimer" class="coutdown-text"></p>
+                </div>
+</div>
+<div id="name-screen" class="none">
+    <p class="cancel-text" onclick="window.location.href='/'">Cancel</p>
+    <div class="input-info-container">
+        <p class="input-info-text">What's your name?</p>
+    </div>
+    <div class="input-text">
+        <input class="input-text-field" type="text" name="userName" value="" id="inputName">
+    </div>
+
+
+    @*If the company leaderboard function shold be used set the onclick below to "inputCompany();" else use "waitingForResultNoCompany();"*@
+    <button class="next-button" onclick="waitingForResultNoCompany();">Next</button>
+</div>
+<div id="company-screen" class="none">
+    
+    <p class="cancel-text" onclick="window.location.href = '/'">Cancel</p>
+<div class="company-page">
+    <div class="input-info-container2">
+        <p class="input-infocompany-text">Choose your partner</p>
+    </div>
+    <div id="buttons">
+        <table class="button-table">
+            <tr>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Altibox AS');">Altibox AS</button>
+                </td>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Altibox Danmark AS');">Altibox Danmark AS</button>
+                </td>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Altifiber AS');">Altifiber AS</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Bergen Fiber AS');">Bergen Fiber AS</button>
+                </td>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Fusa Kraftlag SA');">Fusa Kraftlag SA</button>
+                </td>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Modalen Kraftlag SA');">Modalen Kraftlag SA</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Kvam Kraftverk AS');">Kvam Kraftverk AS</button>
+                </td>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Eidsiva Bredbånd');">Eidsiva Bredbånd</button>
+                </td>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Fiber1 AS');">Fiber1 AS</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Haugaland Kraft Fiber AS');">Haugaland Kraft Fiber AS</button>
+                </td>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Afiber AS');">Afiber AS</button>
+                </td>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('BKK Breiband AS');">BKK Breiband AS</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Finnås Kraftlag SA');">Finnås Kraftlag SA</button>
+                </td>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Fitjar Kraftlag SA');">Fitjar Kraftlag SA</button>
+                </td>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Suldal Elverk KF');">Suldal Elverk KF</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('HardangerNett AS');">HardangerNett AS</button>
+                </td>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Hålogaland Kraft Bredbånd AS');">Hålogaland Kraft Bredbånd AS</button>
+                </td>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Istad Fiber AS');">Istad Fiber AS</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Klepp Energi AS');">Klepp Energi AS</button>
+                </td>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Kragerø Bredbånd AS');">Kragerø Bredbånd AS</button>
+                </td>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('DEAN');">DEAN</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Lofotkraft Bredbånd AS');">Lofotkraft Bredbånd AS</button>
+                </td>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Lyse Fiber AS');">Lyse Fiber AS</button>
+                </td>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Notodden Energi Kraft AS');">Notodden Energi Kraft AS</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Midt-Telemark Breiband AS');">Midt-Telemark Breiband AS</button>
+                </td>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Bruse AS');">Bruse AS</button>
+                </td>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Telefiber AS');">Telefiber AS</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('NTE Marked AS');">NTE Marked AS</button>
+                </td>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Sandefjord Bredbånd KF');">Sandefjord Bredbånd KF</button>
+                </td>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Signal Bredbånd AS');">Signal Bredbånd AS</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Tafjord Marked AS');">Tafjord Marked AS</button>
+                </td>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Vesterålskraft Bredbånd AS');">Vesterålskraft Bredbånd AS</button>
+                </td>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Viken Fiber AS');">Viken Fiber AS</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Midtjyllands Elektricitetsforsyning');">Midtjyllands Elektricitetsforsyning</button>
+                </td>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Grindsted El- og Varmeværk');">Grindsted El- og Varmeværk</button>
+                </td>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Jysk Energi A/S');">Jysk Energi A/S</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Fiber Backbone A/S');">Fiber Backbone A/S</button>
+                </td>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Thy-Mors Energi');">Thy-Mors Energi</button>
+                </td>
+                <td>
+                    <button class="company-button" onclick="waitingForResult('Energi Ikast Varme A/S');">Energi Ikast Varme A/S</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </div>
+</div>
+<div id="waiting-screen" class="none">
+    <p class="cancel-text" onclick="window.location.href='/'">Cancel</p>
+    <div class="input-info-container">
+        <p class="input-info-text">Calculating your score</p>
+    </div>
+</div>
+<div id="result-screen" class="none">
+    <table>
+    <col width="50%">
+        <col width="50%">
+        <tr>
+            <td>
+                <div>
+                    <div class="photo-div">
+                        <canvas id="myCanvas" width="400" height="225"></canvas>
+                        <table class="result-table">
+                            <col width="50%">
+                            <col width="50%">
+                            <tr class="result-score-line">
+                                <td class="photo-result-tab-left">
+                                    <p id="userNameText" class="result-name-text"></p>
+                                </td>
+                                <td>
+                                    <div class="result-score-div">
+                                        <p id="scoreText" class="result-score-text"></p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="result-overview">
+                <p class="info-score-text" id="info-score-text"></p>
+                <p class="top-score-text">Top 5 scores</p>
+
+                    <table id="leaderBoardScores" style="display: none">
+                        <tbody class=""></tbody>
+                    </table>
+                    <p class="none">
+                        How does it work?
+                    </p>
+                    <p class="none">
+                        However, we also want you to have fun.
+                        <br /><br />
+                        A technology that can understand the intricacies of the human face is directly transferable to advanced machine detection in various situations, for both oil and gas plants and in the new green energy sector. It can be applied to predictive load analysis, metal fatigue and a variety of other areas.
+                        <br /><br />
+                        Try it yourself and ask our experts how you can benefit from new technologies!
+                    </p>
+                <button class="next-button" onclick="window.location.href='/'">Done</button>
+                </div>
+                </td>
+
+        </tr>
+    </table>
+</div>
+    <div id="flash">
+    </div>
+
+</body>
+<script>
+
+    var video = document.querySelector("#videoElement");
+    var connectionError = false;
+    var userScore = 0;
+    var userRank = 0;
+
+    navigator.getUserMedia = navigator.getUserMedia ||
+        navigator.webkitGetUserMedia ||
+        navigator.mozGetUserMedia ||
+        navigator.msGetUserMedia ||
+        navigator.oGetUserMedia;
+
+    if (navigator.getUserMedia) {
+        navigator.getUserMedia({ video: true }, handleVideo, videoError);
+    }
+
+    function handleVideo(stream) {
+        video.src = window.URL.createObjectURL(stream);
+    }
+
+    function videoError(e) {
+        // do something
+    }
+
+    var canvas, ctx, companyName;
+
+    function init() {
+        // Get the canvas and obtain a context for
+        // drawing in it
+        canvas = document.getElementById("myCanvas");
+        ctx = canvas.getContext('2d');
+    }
+
+    function snapshot() {
+        console.log("sending snapshot for rating");
+        if (video.paused || video.ended) return false;
+        var imageUrl = canvas.toDataURL("image/png"); //canvas.toDataURL("image/png");
+        imageUrl = imageUrl.replace('data:image/png;base64,', '');
+        var name = document.getElementById('inputName').value;
+        document.getElementById('userNameText').innerHTML = name;
+
+        $.ajax({
+            type: 'POST',
+            url: "/api/Photo/rate",
+            data: JSON.stringify({ "imageData": imageUrl, "name": name, "company": companyName }),
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+            success: function (msg) {
+                console.log(msg.content);
+                console.log(msg.content['rank']);
+                console.log(msg.content['score']);
+                userScore = parseFloat(msg.content['score']);
+                userRank = parseFloat(msg.content['rank']);
+                var outputMessage = "";
+                if (userScore > -1000) {
+                    outputMessage = "Your happy face score is " + msg.content;
+                    document.getElementById('scoreText').innerHTML = userScore;
+                } else {
+                    outputMessage =
+                        "We could not recognise your face, make sure you entire face is shown in the picture";
+                    document.getElementById('scoreText').innerHTML = 0;
+                }
+                
+                //alert(outputMessage);
+                inputResult();
+            },
+            error: function (request, status, error) {
+                alert("There was a problem with the connection");
+                document.getElementById('scoreText').innerHTML = 0;
+                connectionError = true;
+                inputResult();
+            }
+        });
+    }
+
+    function countdown() {
+        $("#start-button").removeClass("snapshot-button");
+        $("#start-button").addClass("none");
+        var timeleft = 4;
+        var downloadTimer = setInterval(function() {
+            timeleft--;
+            if (timeleft >= 0) {
+                document.getElementById("countdowntimer").textContent = timeleft;
+                if (timeleft == 0) {
+                    flash();
+                    console.log("Take snapshot");
+                    
+                    // Draws current image from the video element into the canvas
+                    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+                }
+            } else {
+                inputName();
+                clearInterval(downloadTimer);
+            }        
+        },
+            1000);
+
+
+    }
+
+
+    function flash() {
+        $("#flash").addClass("flash-on");
+    }
+
+    function inputName() {
+       
+        $("#main-body").removeClass("body-background");
+        $("#main-body").addClass("body-background-empty");
+        $("#flash").removeClass("flash-on");
+        $("#video-screen").removeClass("showDiv");
+        $("#video-screen").addClass("none");
+        $("#name-screen").removeClass("none");
+        $("#name-screen").addClass("showDiv");
+        var input = document.getElementById('inputName');
+        input.focus();
+        input.select();
+    }
+
+    function inputCompany() {
+            var inputName = document.getElementById('inputName').value;
+            if (inputName !== null && inputName.length > 0) {
+                $("#name-screen").removeClass("showDiv");
+                $("#name-screen").addClass("none");
+                $("#company-screen").removeClass("none");
+                $("#company-screen").addClass("showDiv");
+             }
+    }
+
+    function waitingForResult(company) {
+        console.log("Checking company");
+        
+        if (company !== null && company !== undefined) {
+            companyName = company;
+            console.log(company);
+        snapshot();
+            $("#company-screen").removeClass("showDiv");
+            $("#company-screen").addClass("none");
+        $("#waiting-screen").removeClass("none");
+            $("#waiting-screen").addClass("showDiv");
+                }
+    }
+
+    function waitingForResultNoCompany(company) {
+
+        snapshot();
+        $("#name-screen").removeClass("showDiv");
+        $("#name-screen").addClass("none");
+        $("#waiting-screen").removeClass("none");
+        $("#waiting-screen").addClass("showDiv");
+                
+    }
+
+    function inputResult() {
+        getLeaderBoard();
+        $("#main-body").removeClass("body-background-empty");
+        $("#main-body").addClass("body-background-result");
+        $("#waiting-screen").removeClass("showDiv");
+        $("#waiting-screen").addClass("none");
+        $("#result-screen").removeClass("none");
+        $("#result-screen").addClass("showDiv");
+    }
+    function evaluateScore() {
+        if (userRank > 3) {
+            document.getElementById("info-score-text").textContent =
+                "You are the " + userRank + "th happiest person at RPA-dagen";
+        }
+        else if (userRank == 3) {
+            document.getElementById("info-score-text").textContent = "You are the third happiest person at RPA-dagen";
+        }
+        else if (userRank == 2) {
+            document.getElementById("info-score-text").textContent = "You are the second happiest person at RPA-dagen";
+        }
+        else if (userRank == 1) {
+            document.getElementById("info-score-text").textContent = "You are the happiest person at RPA-dagen";
+        }
+        else {
+            document.getElementById("info-score-text").textContent = "Something went wrong when calculating your score";
+        }
+    }
+
+    function getLeaderBoard() {
+
+        console.log("start fetch");
+
+        fetch('/api/Photo/leaderboard', {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            }
+        })
+            .then(response => response.json())
+            .then(dataIn => {
+                console.log("Saved data");
+                var scoreObjects = dataIn.content;
+                console.log(scoreObjects);
+                console.log(scoreObjects.score);
+                var count = 0;
+                var $tbody = $("#leaderBoardScores").find('tbody');
+                evaluateScore();
+                if (scoreObjects.length > 5) {
+                    for (var i = 0; i < 5; i++) {
+                        var $row = $('<tr>');
+                        if (userRank == (i + 1) && userRank > 0) {
+                            $row = $('<tr class="user-score-in-leaderboard">');
+                        }
+                        else {
+                            $row = $('<tr>');
+                        }
+                        var $col1 = $('<td class="name-text">');
+                        $col1.text(scoreObjects[i].name);
+                        $row.append($col1);
+                        $col2 = $('<td class="score-text">');
+                        $col2.text(scoreObjects[i].score);
+                        $row.append($col2);
+                        $tbody.append($row);
+                        count++;
+                    }
+                } else {
+                    for (var i = 0; i < scoreObjects.length; i++) {
+                        var $row = $('<tr>');
+                        if (userRank == (i + 1) && userRank > 0) {
+                            $row = $('<tr class="user-score-in-leaderboard">');
+                        }
+                        else {
+                            $row = $('<tr>');
+                        }
+                        var $col1 = $('<td class="name-text">');
+                        $col1.text(scoreObjects[i].name);
+                        $row.append($col1);
+                        $col2 = $('<td class="score-text">');
+                        $col2.text(scoreObjects[i].score);
+                        $row.append($col2);
+                        $tbody.append($row);
+                        count++;
+                    }
+                }
+                console.log(count);
+                leaderBoardScores.style.display = "block";
+            });
+    }
+</script>
+</html>

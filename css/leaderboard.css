@@ -297,22 +297,6 @@ Leaderboard Table
 .leadertable span.first-letter { display:inline-block; width:45px; height:45px; text-align:center; border-radius:50%; -moz-border-radius:50%; -webkit-border-radius:50%; background:#dadada; line-height:43px; text-transform:uppercase; font-size:24px; font-weight:300; margin-right:15px;}
 .leadertable .user-pic { width:45px; height:45px; border-radius:50%; -moz-border-radius:50%; -webkit-border-radius:50%; margin-right:15px;}
 
-.leadertable.coding tr th { background:#681f79; }
-.leadertable.hybris tr th { background:#ff0000; }
-.leadertable.adobe-aem tr th {background:#578c20; }
-.leadertable.blockchain-db tr th { background:#0096c9; }
-.leadertable.salesforce tr th { background:#bd0067;  }
-.leadertable.tech-aptitude tr th{ background:#e87926;  }
-.leadertable.data-science tr th { background:#ffcb27; }
-.leadertable.pega tr th { background:#ff5b2e; }
-.leadertable.bot-framework tr th { background:#ff0000; }
-.leadertable.cloud-computing tr th { background:#bd0067; }
-.leadertable.devops tr th { background:#681f79; }
-.leadertable.ibm-bluemix tr th { background:#578c20; }
-.leadertable.iot tr th { background:#0096c9; }
-.leadertable.machine-learning tr th { background:#1968d3; }
-.leadertable.mobility tr th { background:#007570; }
-.leadertable.nosql tr th { background:#ffcb27; }
 .leadertable.campus tr th { background:#bdbe00; }
 .color1 { background:#25aed2 !important; color:#fff !important;}
 .color2 { background:#f1ce0d !important; color:#fff !important;}
