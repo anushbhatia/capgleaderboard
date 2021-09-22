@@ -14,7 +14,7 @@
     padding-top: 0;
 }
 .body-background-empty {
-    background: none;
+    background: #2B0A3D;
     padding-top: 0;
 }
 .body-background-result {
@@ -166,6 +166,7 @@
     color: #0070AD;
     font-size: 22px;
     margin-right: 0px;
+    font-family: 'Ubuntu', Fallback, sans-serif;
     margin-top: 30px;
     text-align: right;
     vertical-align: top;
@@ -182,6 +183,8 @@
 }
 .input-info-text {
     text-align: center;
+    color: #FFFFFF;;
+    font-family: 'Ubuntu', Fallback, sans-serif;
     font-size: 30px;
 }
 .input-infocompany-text {
@@ -198,6 +201,7 @@
     border-bottom: 2px solid;
     font-size: 60px;
     width: 700px;
+    color: #FFFFFF;
     text-align: center;
     background: transparent;
     display: block;
@@ -206,6 +210,9 @@
 }
 .input-text-field {
     background-color: transparent;
+    color: #FFFFFF;
+    font-family: 'Ubuntu', Fallback, sans-serif;
+    font-size: 20px;
     border: 0px solid;
     width: 500px;
     text-align: center;
@@ -434,18 +441,24 @@
         font-size: 22px;
         margin-top: 30px;
     }
-    /* .snapshot-button {
-        height: 80px;
-        width: 370px;
-        color: white;
-        font-size: 25px;
-    } */
     .image-container {
         padding-top: 0px;
         display: block;
         width: 500px;
         margin: auto;
         margin-top: 50px;
+    }
+    .input-text {
+        font-size: 60px;
+        width: 300px;
+    }
+    .input-text-field {
+        background-color: transparent;
+        color: #FFFFFF;
+        font-family: 'Ubuntu', Fallback, sans-serif;
+        font-size: 20px;
+        border: 0px solid;
+        width: 300px;
     }
 }
 @media (max-width:600px) {
