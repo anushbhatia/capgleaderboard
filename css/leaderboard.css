@@ -9,7 +9,7 @@ body {
     font-family: Helvetica, Arial, sans-serif;
     width: 100%;
     margin-top: 60px;
-    background: url(/images/background-photo-leaderboard.png);
+    background: #2B0A3D;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: left;
@@ -21,7 +21,7 @@ body {
     font-family: Helvetica, Arial, sans-serif;
     width: 100%;
     margin-top: 60px;
-    background: url(/images/background-photo-leaderboard.png);
+    background: #2B0A3D;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: left;
@@ -65,7 +65,7 @@ body {
 }
 
 .large-text {
-    color: black;
+    color: white;
     font-family: 'Ubuntu', Fallback, sans-serif;
     text-align: center;
     font-size: 50px;
@@ -207,6 +207,7 @@ table-background {
     font-size: 22px;
     font-family: 'Ubuntu', Fallback, sans-serif;
     text-align: center;
+    color: white;
     margin: 10px;
     margin-top: 30px;
 }
@@ -214,6 +215,7 @@ table-background {
     text-align: left;
     font-size: 22px;
     font-weight: bold;
+    color: white;
     font-family: 'Ubuntu', Fallback, sans-serif;
     text-align: center;
     margin: auto;
@@ -230,7 +232,7 @@ table-background {
     margin:30px;
 }
 .form {
-    background: rgba(19, 35, 47, 0.9);
+    background: rgb(47, 47, 48);
     padding: 10px;
     max-width: auto;
     margin: 40px auto;
@@ -632,7 +634,7 @@ Leaderboard Table
         transform: rotate(2deg);
         padding: 8px;
         width: 340px;
-        margin-left: -20px;
+        margin-left: -10px;
         margin-right: -20px;
         border: 1px solid;
         background-color: white;
@@ -662,11 +664,11 @@ Leaderboard Table
     
     
     .result-table {
-        margin: 10px;
+        margin: 5px;
     }
     
     .result-score-line {
-        width: 380px;
+        width: 390px;
         display: block;
     }
     
