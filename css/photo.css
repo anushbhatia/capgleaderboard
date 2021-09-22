@@ -189,13 +189,10 @@
     font-size: 30px;
     font-weight: bold;
 }
-/* .disclaimer-container {
-    width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+.disclaimer-container {
     margin-top: 100px;
     margin-bottom: 80px;
-} */
+}
 .input-text {
     border: 0;
     border-bottom: 2px solid;
