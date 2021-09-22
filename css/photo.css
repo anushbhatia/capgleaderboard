@@ -87,7 +87,7 @@
 }
 
 .disclaimer-info-top {
-    text-align: left;
+    text-align: center;
     font-size: 22px;
     font-weight: bold;
     
@@ -222,6 +222,7 @@
     height: 80px;
     width: 500px;
     color: white;
+    font-family: 'Ubuntu', Fallback, sans-serif;
     background-color: #0070AD;
     border-radius: 16px;  
     border:none;
@@ -236,6 +237,7 @@
 .disagree-button {
     height: 80px;
     width: 500px;
+    font-family: 'Ubuntu', Fallback, sans-serif;
     color: black;
     background-color: white;
     border-radius: 16px;  
@@ -411,11 +413,28 @@
 }
 .none { display:none; } 
 .showDiv { display:block; } 
-@media (max-width:540px) {
+@media (max-width:800px){
+    .next-button {
+        height: 80px;
+        width: 350px;   
+        font-size: 25px;
+    }
+    .disagree-button {
+        height: 80px;
+        width: 350px;
+        font-size: 25px;
+        position: relative;
+    }
+    .disclaimer-info {
+        font-size: 22px;
+        width: 350px;
+    }
+}
+@media (max-width:600px) {
     .get-started-button {
         font-family: 'Ubuntu', Fallback, sans-serif;
         height: 60px;
-        width:300px;
+        width:350px;
         color: white;
         margin-top: 50px;
         margin:auto;
@@ -429,8 +448,33 @@
         font-weight: bold;
         font-size: 30px;
     }
+    .disclaimer-info-top {
+        text-align: left;
+        font-size: 20px;
+        font-weight: bold;
+        
+    }
+    .disclaimer-info {
+        text-align: left;
+        color: #FFFFFF;
+        font-size: 22px;
+        font-family: 'Ubuntu', Fallback, sans-serif;
+        text-align: center;
+        margin: auto;
+        width: 250px;
+    }
+    .disagree-button {
+        height: 60px;
+        width: 250px;
+        font-size: 20px;
+    }
+    .next-button {
+        height: 60px;
+        width: 250px;   
+        font-size: 25px;
+    }
 }
-@media (max-width:335px) {
+@media (max-width:400px) {
     .get-started-button {
         font-family: 'Ubuntu', Fallback, sans-serif;
         height: 50px;
