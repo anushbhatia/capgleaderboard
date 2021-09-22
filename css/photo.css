@@ -562,4 +562,7 @@
         margin: auto;
         margin-top: 50px;
     }
+    .cancel-text{
+        font-size: 18px;
+    }
 }
